@@ -1,3 +1,37 @@
+// Target date: 25th January 2025
+const targetDate = new Date("2025-01-25T10:00:00");
+
+function updateCountdown() {
+  const currentDate = new Date();
+  const timeDifference = targetDate - currentDate; 
+    if (timeDifference <= 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+    }
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days.toString().padStart(2, "0");
+    document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+//loader animation
+var loader = document.querySelector("#mainloader");
+
+setTimeout(() => {
+  loader.style.top = "-100%";
+}, 3650);
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -50,4 +84,4 @@ let url = "https://script.google.com/macros/s/AKfycbzWMuEajUXjNABzWHesGEzyqVntxk
     e.preventDefault();
   });
 
-
+  
