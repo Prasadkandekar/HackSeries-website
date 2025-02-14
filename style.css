@@ -1779,22 +1779,23 @@ input[type="reset"]:hover {
 }
 
 .category-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(255, 217, 0, 0.828), rgba(255, 165, 0, 0.7));
   padding: 0.5rem 2rem;
   border-radius: 12px;
-  width: 300px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  height:6rem ;
+  width: 18.75rem; /* 300px / 16 = 18.75rem */
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(239, 192, 22);
+  transition: all 0.5s ease;
 }
 
 .category-card:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 217, 0, 0.698);
   transform: translateY(-5px);
 }
 
 .text-highlight {
-  color: #FECC01;
+  color: #fff;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -1808,12 +1809,11 @@ input[type="reset"]:hover {
   height: auto; /* Maintains aspect ratio */
   border-radius: 15px;
   border: 3px solid #fff;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(189, 1, 1, 0.2);
 }
 @media (max-width: 768px) {
   .category-card {
     width: 100%;
-    padding: 1rem;
   }
 
   .winner-group-img {
