@@ -1679,8 +1679,23 @@ input[type="reset"]:hover {
 .title-3{
   font-family: 'DM Serif Display', serif;
   color: transparent;
-  background: linear-gradient(to right, #FECC01 , #fff) ;
+  padding-top: 2rem;
+  background: linear-gradient(to right, #FFD700 , #fff) ;
   -webkit-background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .title-3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-3 {
+    font-size: 1.5rem; /* Further adjust font size for very small screens */
+    padding-top: 15px;
+  }
 }
 /* .carousel {
   max-width: 800px; 
@@ -2058,7 +2073,6 @@ input[type="reset"] {
 @media (max-width: 768px) {
   .container {
     grid-auto-columns: calc(100% - 40px);
-    padding: 20px;
   }
   
   .block {
